@@ -1236,6 +1236,10 @@ button:focus {
     padding: 24px 40px 24px 200px;
     width: 100%;
   }
+  .main-page .account-section .account-wrapper .account-stats .account-stats-table {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+  }
   .main-page .account-section .account-wrapper .account-description .header {
     max-width: 100%;
     font-size: 28px;

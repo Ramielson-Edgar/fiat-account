@@ -1239,7 +1239,11 @@ button:focus {
             padding: 24px 40px 24px 200px;
             width: 100%;
           }
-        }
+          
+           .account-stats-table {
+               transform: translateZ(0);
+           }
+        }  
 
         .account-description {
           .header {
