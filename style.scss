@@ -1170,7 +1170,16 @@ button:focus {outline: none;}
                     &::before {
                         display: none;
                     }
+
                 }
+
+                 .first-screen-header {
+                        .first-screen-heading {
+                            img {
+                                width: 168px;
+                            }
+                        }
+                    }
             }
         }
         .features-section {

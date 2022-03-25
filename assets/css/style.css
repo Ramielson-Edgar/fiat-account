@@ -1158,6 +1158,9 @@ button:focus {
   .main-page .first-screen-section .main-section .main-img-container::before {
     display: none;
   }
+  .main-page .first-screen-section .main-section .first-screen-header .first-screen-heading img {
+    width: 168px;
+  }
   .main-page .features-section .features-list .features-item .card .card-body {
     padding: 10px;
   }
