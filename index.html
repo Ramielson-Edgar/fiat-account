@@ -36,7 +36,7 @@
 
 
           <button class="btn" type="button">
-            <a  class="btn-primary button-link" href="#">Open Account
+            <a class="btn-primary button-link" href="#">Open Account
 
               <svg width="12" height="11" viewBox="0 0 12 19" fill="none">
                 <path
@@ -48,7 +48,7 @@
 
         </header>
 
-        <div role="img" class="main-img-containert">
+        <div role="img" class="main-img-container">
           <img class="img-fluid" src="./img/main-hero-fiat-account.png" alt="wallet with card crypto coin" width="731"
             height="640" />
         </div>
@@ -59,7 +59,7 @@
 
         <div class="list-wrapper container">
           <ul class="nav features-list">
-            <li  class="features-item " >
+            <li class="features-item ">
               <div class="card">
                 <div class="img-container">
                   <svg width="112" height="90" viewBox="0 0 112 90" fill="none">
@@ -135,7 +135,7 @@
               </div>
             </li>
 
-            <li   class="features-item">
+            <li class="features-item">
               <div class="card">
                 <div class="img-container">
                   <svg width="106" height="90" viewBox="0 0 106 98" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -274,7 +274,7 @@
               </div>
             </li>
 
-            <li   class="features-item">
+            <li class="features-item">
               <div class="card">
                 <div class="img-container">
                   <svg width="88" height="90" viewBox="0 0 88 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -455,7 +455,7 @@
               </div>
             </li>
 
-            <li   class="features-item">
+            <li class="features-item">
               <div class="card">
                 <div class="img-container">
                   <svg width="89" height="90" viewBox="0 0 89 77" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -559,10 +559,6 @@
               </tr>
               <tr class="account-stats-row">
                 <td class="account-stats-header text-left">All Strategies Allowed</td>
-                <td class="account-stats-description text-right"> yes</td>
-              </tr>
-              <tr class="account-stats-row">
-                <td class="account-stats-header text-left">Swap-free Islamic Account Option</td>
                 <td class="account-stats-description text-right"> yes</td>
               </tr>
               </thead>
@@ -995,7 +991,7 @@
           </h2>
 
           <button class="btn" type="button">
-            <a href="#" class="button-link btn-primary ">Open Account
+            <a href="#" class="button-link btn-primary ">Learn More
               <svg width="12" height="11" viewBox="0 0 12 19" fill="none">
                 <path
                   d="M1.46345 18.3975C0.8736 17.8969 0.571712 17.1842 0.571712 16.4659C0.571712 15.8881 0.769173 15.3052 1.17232 14.8286L5.69876 9.49969L1.17296 4.17075C0.267924 3.1056 0.397668 1.50755 1.46346 0.601883C2.53051 -0.30315 4.12666 -0.172775 5.03296 0.893013L10.9511 7.86113C11.7543 8.80604 11.7543 10.194 10.9511 11.1382L5.03296 18.107C4.12666 19.1728 2.52987 19.3025 1.46345 18.3975Z"
@@ -1067,17 +1063,72 @@
         </header>
 
         <div role="img" class="img-container">
-          <img class="img-fluid" src="./img/copy-trading-img.png" alt="many card with users stat profit with blur effect"
-            width="526" height="461">
+          <img class="img-fluid" src="./img/copy-trading-img.png"
+            alt="many card with users stat profit with blur effect" width="526" height="461">
         </div>
       </div>
     </section>
   </main>
 
 
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+   
+  <script src="/js/tilit.js"></script>
+  <script>
+    VanillaTilt.init(document.querySelector(".account-stats"), {
+		max: 15,
+		speed: 400,
+    scale: .9,
+
+	});
+  </script>
+  <script>
+    let tl = gsap.timeline({ defaults: { ease: 'power4.inOut', duration: 2 } })
+     gsap.registerPlugin(ScrollTrigger)
+
+    tl.to('.first-screen-heading', { 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', opacity: 1, translateY: 0, duration: 2.3 })
+    tl.to('.first-screen-description', { 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', opacity: 1, translateY: 0, duration: 1.8 }, 1.1)
+    tl.to('.btn-primary', { opacity: 1, duration: 1.5, }, '-=2')
+    tl.to('.main-img-container', { 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', opacity: 1, translateY: 0, duration: 1.5 }, 0)
+    tl.to('.features-item', {stagger: .1, duration: 1.2, opacity:1, translateY: 0 },1)
+   
+    gsap.to('.security-item', {
+      scrollTrigger: {
+        trigger:'.security-item',
+        toggleActions: 'play pause resume none',
+        start: '-400px center',
+      },
+        stagger: .4, 
+        duration: 1, 
+        opacity: 1, 
+        translateY: 0,
+         
+    })
+  
+    gsap.to(".discover-section", {
+      scrollTrigger: {
+        trigger :".discover-section",
+        toggleActions: 'play none  none none',
+        start: '-150px center',
+        
+      },
+
+     'clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+      opacity: 1, 
+      duration: .8, 
+
+   
+});
+  
+  </script>
+
+
 </body>
+
 </html>

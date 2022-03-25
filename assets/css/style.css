@@ -25,14 +25,37 @@
   --bg-grey: #f0f0f0;
   --bg-purple-light: #b4abd7;
   --bg-main-color: #b391ce;
-  --primary-btn-gradient: linear-gradient(94.7deg, #fb44ff -53.76%, #ee950f 121.32%);
-  --primary-shadow: -10px -10px 30px rgba(255, 255, 255, 0.4), 10px 10px 30px rgba(255, 106, 249, 0.4);
-  --secondary-btn-gradient: linear-gradient(96.76deg, #44a5ff -31.91%, #11ffd5 89.1%);
-  --secondary-shadow: -10px -10px 30px rgba(255, 255, 255, 0.4), 10px 10px 30px rgba(17, 255, 212, 0.2);
-  --black-btn-shadow: -10px -10px 30px rgba(255, 255, 255, 0.4), 10px 10px 30px rgba(0, 0, 0, 0.1);
-  --first-screen-gradient: linear-gradient(180deg, var(--white-color) -56.25%, rgba(255, 255, 255, 0) 181.03%);
-  --card-gradient: linear-gradient(180deg, var(--white-color) -24.59%, rgba(255, 255, 255, 0) 128.36%);
-  --fiat-account-gradient: linear-gradient(180deg, var(--white-color) -22.4%, rgba(255, 255, 255, 0.63) 58.87%);
+  --primary-btn-gradient: linear-gradient(
+    94.7deg,
+    #fb44ff -53.76%,
+    #ee950f 121.32%
+  );
+  --primary-shadow: -10px -10px 30px rgba(255, 255, 255, 0.4),
+    10px 10px 30px rgba(255, 106, 249, 0.4);
+  --secondary-btn-gradient: linear-gradient(
+    96.76deg,
+    #44a5ff -31.91%,
+    #11ffd5 89.1%
+  );
+  --secondary-shadow: -10px -10px 30px rgba(255, 255, 255, 0.4),
+    10px 10px 30px rgba(17, 255, 212, 0.2);
+  --black-btn-shadow: -10px -10px 30px rgba(255, 255, 255, 0.4),
+    10px 10px 30px rgba(0, 0, 0, 0.1);
+  --first-screen-gradient: linear-gradient(
+    180deg,
+    var(--white-color) -56.25%,
+    rgba(255, 255, 255, 0) 181.03%
+  );
+  --card-gradient: linear-gradient(
+    180deg,
+    var(--white-color) -24.59%,
+    rgba(255, 255, 255, 0) 128.36%
+  );
+  --fiat-account-gradient: linear-gradient(
+    180deg,
+    var(--white-color) -22.4%,
+    rgba(255, 255, 255, 0.63) 58.87%
+  );
   --blur-60: blur(60px);
   --blur-50: blur(50px);
   --blur-30: blur(30px);
@@ -133,6 +156,7 @@ a {
   background: var(--primary-btn-gradient);
   -webkit-box-shadow: var(--primary-shadow);
           box-shadow: var(--primary-shadow);
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -146,8 +170,9 @@ a {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 0;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
@@ -157,9 +182,9 @@ a {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
   color: var(--white-color);
-  -webkit-box-shadow: -10px -10px 30px rgba(255, 255, 255, 0.7), 10px 10px 30px rgba(112, 34, 13, 0.2);
-          box-shadow: -10px -10px 30px rgba(255, 255, 255, 0.7), 10px 10px 30px rgba(112, 34, 13, 0.2);
   outline: none;
+  -webkit-box-shadow: -10px -10px 30px rgba(255, 255, 255, 0.6), 10px 10px 30px rgba(221, 45, 130, 0.2);
+          box-shadow: -10px -10px 30px rgba(255, 255, 255, 0.6), 10px 10px 30px rgba(221, 45, 130, 0.2);
 }
 
 .btn-secondary {
@@ -320,6 +345,11 @@ button:focus {
 }
 
 .main-page .first-screen-section .main-section .first-screen-header .first-screen-heading {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
   display: block;
   content: "";
   background-repeat: no-repeat;
@@ -336,10 +366,18 @@ button:focus {
 .main-page .first-screen-section .main-section .first-screen-header .first-screen-description {
   font-size: var(--font-size-30);
   margin-bottom: 20px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  opacity: 0;
 }
 
 .main-page .first-screen-section .main-section .main-img-container {
   position: relative;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  opacity: 0;
 }
 
 .main-page .first-screen-section .main-section .main-img-container::before {
@@ -349,7 +387,7 @@ button:focus {
   background-repeat: no-repeat;
   background-position: center;
   content: "Allpips Fiat";
-  top: 200px;
+  top: 100px;
   left: 0;
   font-family: var(--header-font-family);
   text-align: center;
@@ -387,19 +425,11 @@ button:focus {
 }
 
 .main-page .features-section .features-list .features-item {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.main-page .features-section .features-list .features-item:hover {
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
-  color: var(--white-color);
-  border-radius: 17px;
-  -webkit-box-shadow: -10px -10px 30px rgba(255, 255, 255, 0.6), 10px 10px 30px rgba(221, 45, 130, 0.2);
-          box-shadow: -10px -10px 30px rgba(255, 255, 255, 0.6), 10px 10px 30px rgba(221, 45, 130, 0.2);
+  -webkit-transform: translateY(60px);
+          transform: translateY(60px);
+  opacity: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .main-page .features-section .features-list .features-item .card {
@@ -420,6 +450,19 @@ button:focus {
           box-shadow: 33px 53px 50px -20px rgba(120, 109, 239, 0.3);
   border-radius: 17px;
   background: var(--card-gradient);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.main-page .features-section .features-list .features-item .card:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  color: var(--white-color);
+  border-radius: 17px;
+  -webkit-box-shadow: -10px -10px 30px rgba(255, 255, 255, 0.6), 10px 10px 30px rgba(221, 45, 130, 0.2);
+          box-shadow: -10px -10px 30px rgba(255, 255, 255, 0.6), 10px 10px 30px rgba(221, 45, 130, 0.2);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .main-page .features-section .features-list .features-item .card .img-container {
@@ -481,27 +524,11 @@ button:focus {
 .main-page .account-section .account-wrapper .account-stats {
   position: relative;
   margin-right: 100px;
-}
-
-.main-page .account-section .account-wrapper .account-stats::before {
-  display: block;
-  content: "";
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  -webkit-transform: translate(30px, -34px);
-          transform: translate(30px, -34px);
-  width: 73px;
-  height: 72px;
-  border: 1px solid var(--white-color);
-  border-radius: 10px 0px 11px;
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(-35.42%, #ffffff), color-stop(186.11%, rgba(255, 249, 249, 0)));
-  background: linear-gradient(180deg, #ffffff -35.42%, rgba(255, 249, 249, 0) 186.11%);
-  z-index: 1;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: perspective(1000px);
+          transform: perspective(1000px);
+  margin-bottom: 300px;
 }
 
 .main-page .account-section .account-wrapper .account-stats::after {
@@ -518,7 +545,9 @@ button:focus {
   background-size: contain;
   -webkit-filter: drop-shadow(0px 40px 30px rgba(0, 0, 0, 0.2));
           filter: drop-shadow(0px 40px 30px rgba(0, 0, 0, 0.2));
-  z-index: 1;
+  -webkit-transform: translateZ(50px);
+          transform: translateZ(50px);
+  z-index: 100;
 }
 
 .main-page .account-section .account-wrapper .account-stats .header-stats {
@@ -539,9 +568,12 @@ button:focus {
 }
 
 .main-page .account-section .account-wrapper .account-stats .account-stats-table {
+  position: absolute;
   background: var(--fiat-account-gradient);
   border-radius: 10px;
   padding: 20px;
+  -webkit-transform: translateZ(50px);
+          transform: translateZ(50px);
   -webkit-box-shadow: 0 20px 70px -10px rgba(51, 51, 51, 0.2), 0 50px 100px 0 rgba(51, 51, 51, 0.2);
           box-shadow: 0 20px 70px -10px rgba(51, 51, 51, 0.2), 0 50px 100px 0 rgba(51, 51, 51, 0.2);
 }
@@ -603,7 +635,7 @@ button:focus {
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  top: 50%;
+  top: 65%;
   left: 70%;
   width: 50%;
   height: 628px;
@@ -611,7 +643,7 @@ button:focus {
           transform: translate(-50%, -50%);
   background-image: url("../../img/separator-img.png");
   background-size: contain;
-  z-index: 100;
+  z-index: 1;
 }
 
 .main-page .security-section {
@@ -624,6 +656,12 @@ button:focus {
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+
+.main-page .security-section .security-list .security-item {
+  -webkit-transform: translateY(80px);
+          transform: translateY(80px);
+  opacity: 0;
 }
 
 .main-page .security-section .security-list .img-container {
@@ -640,6 +678,9 @@ button:focus {
 
 .main-page .discover-section {
   background: var(--first-screen-gradient), radial-gradient(50% 50% at top left, rgba(209, 121, 40, 0.5) 0%, rgba(209, 121, 40, 0) 100%), radial-gradient(50% 50% at bottom right, rgba(255, 248, 234, 0.5) 0%, rgba(255, 248, 234, 0) 100%), radial-gradient(50% 50% at top right, rgba(62, 59, 219, 0.5) 0%, rgba(62, 59, 219, 0) 100%);
+  -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+          clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  opacity: 0;
 }
 
 .main-page .discover-section .heading {
@@ -647,21 +688,37 @@ button:focus {
 }
 
 .main-page .discover-section .split-wrapper {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 60px;
   margin-bottom: 100px;
 }
 
 .main-page .discover-section .split-wrapper .img-container,
 .main-page .discover-section .split-wrapper .discover-section-heder {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex-preferred-size: 500px;
+      flex-basis: 500px;
+}
+
+.main-page .discover-section .split-wrapper .discover-section-heder {
+  padding-left: 50px;
+}
+
+.main-page .discover-section .split-wrapper .img-container {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+.main-page .discover-section .split-wrapper .img-container img {
+  width: 100%;
 }
 
 .main-page .discover-section .wrapper-account-btn {
@@ -714,6 +771,19 @@ button:focus {
           box-shadow: 0px 57px 50px -20px rgba(97, 97, 97, 0.2);
   padding: 20px 40px 20px 100px;
   border-radius: 10px;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.main-page .discover-section .wrapper-account-btn .split-wrapper .account-button:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  color: var(--white-color);
+  outline: none;
+  -webkit-box-shadow: -10px -10px 30px rgba(255, 255, 255, 0.6), 10px 10px 30px rgba(221, 45, 130, 0.2);
+          box-shadow: -10px -10px 30px rgba(255, 255, 255, 0.6), 10px 10px 30px rgba(221, 45, 130, 0.2);
 }
 
 .main-page .discover-section .wrapper-account-btn .split-wrapper .account-button .split-wrapper {
@@ -766,6 +836,10 @@ button:focus {
         -ms-flex-align: center;
             align-items: center;
   }
+  .main-page .first-screen-section .main-section .main-img-container::before {
+    top: -10px;
+    font-size: 7.5rem;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -795,8 +869,18 @@ button:focus {
             align-items: center;
   }
   .main-page .account-section .account-wrapper .account-stats {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-right: 0;
-    margin-bottom: 90px;
+    margin-bottom: 460px;
   }
   .main-page .account-section .account-wrapper .account-stats::after {
     width: 165px;
@@ -805,6 +889,7 @@ button:focus {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    width: 566px;
   }
   .main-page .account-section .account-wrapper .account-stats .header-stats h2 {
     font-size: var(--font-size-50);
@@ -814,6 +899,10 @@ button:focus {
   }
   .main-page .account-section .account-wrapper .account-stats .account-stats-table {
     width: 566px;
+    top: 120px;
+  }
+  .main-page .account-section .account-wrapper .account-description .header img {
+    width: 150px;
   }
   .main-page .separator-banner {
     background-size: cover;
@@ -921,6 +1010,19 @@ button:focus {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main-page .discover-section .split-wrapper .img-container {
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
   }
   .main-page .discover-section .split-wrapper .account-button .img-container {
     -webkit-box-orient: horizontal;
@@ -934,22 +1036,22 @@ button:focus {
         -ms-flex-align: center;
             align-items: center;
   }
-  .main-page .discover-section .discover-section-heder {
+  .main-page .discover-section .split-wrapper .discover-section-heder {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .main-page .discover-section .discover-section-heder .btn-primary {
-    margin: 0 auto;
-  }
-  .main-page .discover-section .discover-section-heder .wrapper-400 {
-    max-width: 100%;
-  }
-  .main-page .discover-section .discover-section-heder .heading {
     text-align: center;
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
+  .main-page .discover-section .split-wrapper .discover-section-heder .wrapper-400 {
+    max-width: 100%;
   }
   .main-page .copy-trading .split-wrapper {
     -webkit-box-orient: vertical;
@@ -1009,6 +1111,15 @@ button:focus {
     margin-bottom: 0;
     width: 71px;
     height: 71px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-page .account-section .account-wrapper .account-stats {
+    margin-bottom: 550px;
+  }
+  .main-page .account-section .account-wrapper .account-stats .header-stats {
+    width: 100%;
   }
 }
 
@@ -1105,14 +1216,14 @@ button:focus {
     font-size: var(--font-size-30);
   }
   .main-page .separator-banner .separator-header .heading::before {
-    width: 80%;
+    width: 100%;
     left: 47%;
   }
   .main-page .account-section {
     padding-bottom: 70px;
   }
   .main-page .account-section .account-wrapper .account-stats {
-    margin-bottom: 40px;
+    margin-bottom: 470px;
   }
   .main-page .account-section .account-wrapper .account-stats .header-stats {
     -webkit-box-orient: vertical;
@@ -1123,6 +1234,7 @@ button:focus {
         -ms-flex-pack: end;
             justify-content: flex-end;
     padding: 24px 40px 24px 200px;
+    width: 100%;
   }
   .main-page .account-section .account-wrapper .account-description .header {
     max-width: 100%;
@@ -1136,6 +1248,9 @@ button:focus {
   .main-page .account-section .account-wrapper .account-description .description {
     font-size: 1rem;
     line-height: 1.4;
+  }
+  .main-page .discover-section .split-wrapper .discover-section-heder {
+    padding-left: 0;
   }
   .main-page .discover-section .split-wrapper .discover-section-heder .heading {
     font-size: 2.3rem;
