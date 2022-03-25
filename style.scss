@@ -1232,6 +1232,9 @@ button:focus {
       .account-wrapper {
         .account-stats {
           margin-bottom: 470px;
+          &::after {
+              left: 7px;
+          }
 
           .header-stats {
             flex-direction: column;
@@ -1241,7 +1244,7 @@ button:focus {
           }
           
            .account-stats-table {
-               transform: translateZ(0);
+            transform: translateZ(0);
            }
         }  
 
@@ -1322,13 +1325,16 @@ button:focus {
         }
       }
     }
-
+ 
     .account-section {
       .account-wrapper {
         .account-stats {
+          
+
           .header-stats {
             padding: 24px 40px 24px 150px;
           }
+
           .account-stats-table {
             .account-stats-body {
               .account-stats-row {

@@ -1225,6 +1225,9 @@ button:focus {
   .main-page .account-section .account-wrapper .account-stats {
     margin-bottom: 470px;
   }
+  .main-page .account-section .account-wrapper .account-stats::after {
+    left: 7px;
+  }
   .main-page .account-section .account-wrapper .account-stats .header-stats {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
