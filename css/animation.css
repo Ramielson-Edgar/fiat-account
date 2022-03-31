@@ -1,0 +1,54 @@
+.features-item {
+  clip-path: circle(0% at 0 0);
+}
+
+
+.main-img-container {
+    clip-path: circle(1.8% at 50% 50%);
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.first-screen-heading,
+.first-screen-description {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transform: translateY(60px);
+    opacity: 0; 
+}
+
+
+
+.account-description,
+.account-wrapper {
+    transform: translateX(-1000%);
+}
+
+
+.separator-header{
+     opacity: 0;
+}
+
+.discover-section {
+     clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+     opacity: 0;
+}
+ 
+
+
+.btn-secondary-reveal,
+.btn-primary-reveal,
+.security-item {
+    opacity: 0;
+    transform: translateY(60px);
+}
+ 
+.copy-section-btn {
+    opacity: 0;
+}
+
+.copy-section-desc,
+.copy-section-img,  
+.copy-section-header {
+    clip-path: polygon(100% 0, 0 0, 0 0, 100% 0);
+    opacity: 0;
+}
