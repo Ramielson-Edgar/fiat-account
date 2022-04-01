@@ -93,6 +93,18 @@ gsap.to(".account-wrapper", {
   x: 0,
 });
 
+gsap.to(".account-stats", {
+  scrollTrigger: {
+    trigger: ".account-stats",
+    start: "-150px center",
+    toggleActions: "play pause resume none",
+  },
+
+  opacity: 1,
+  duration: 1.5,
+  x: 0,
+});
+
 gsap.to(".account-description", {
   scrollTrigger: {
     trigger: ".account-description",
