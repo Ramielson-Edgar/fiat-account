@@ -474,27 +474,28 @@ button:focus {
                     @include before-after-option();
                     position: absolute;
 
-                    top: -40px;
+                    top: -30px;
                     left: -20px;
 
-                    width: 145px;
-                    height: 115px;
+                    width: 150px;
+                    height: 150px;
 
                     background-image: url("../../img/icons/icon-fiat-account.png");
                     background-size: contain;
-                    filter: drop-shadow(0px 40px 30px rgba(0, 0, 0, 0.2));
+
                     z-index: 1;
                 }
 
                 .header-stats {
                     display: flex;
                     align-items: baseline;
+                    justify-content: center;
 
-                    padding: 24px 40px 24px 150px;
+                    padding: 25px 30px 30px 100px;
                     border-radius: 10px;
-                    background: linear-gradient(92.89deg, #6a26ff 9.02%, #fb4dff 162.32%);
+                    background: linear-gradient(92.89deg, #ffffff -56.63%, #b28fff 58.55%, #fd99ff 162.32%);
                     h2 {
-                        font-size: var(--font-size-50);
+                        font-size: 2rem;
                         margin-right: 5px;
                     }
                 }
@@ -532,10 +533,11 @@ button:focus {
             }
 
             .account-description {
-                padding: 0 50px;
+                padding: 0 40px;
 
                 .header {
                     font-size: var(--font-size-50);
+                    max-width: 540px;
                     img {
                         display: inline;
                         vertical-align: text-bottom;
@@ -636,6 +638,7 @@ button:focus {
 
         .wrapper-account-btn {
             position: relative;
+            margin-top: 100px;
             z-index: 2;
 
             .header-wrapper-btn {
@@ -662,7 +665,7 @@ button:focus {
 
                     background-size: contain;
                 }
-                
+
                 .icon-crypto-account::before {
                     width: 200px;
                     height: 100px;
@@ -796,7 +799,6 @@ button:focus {
                     .header-stats {
                         display: flex;
                         justify-content: center;
-                        align-items: center;
                     }
                     .account-stats-table {
                         width: 100%;
@@ -810,6 +812,9 @@ button:focus {
                     padding: 0;
 
                     .header {
+                        max-width: 438px;
+                        font-size: 2.5rem;
+
                         img {
                             width: 140px;
                         }
@@ -1054,39 +1059,6 @@ button:focus {
             }
         }
 
-        .account-section {
-            padding-bottom: 120px;
-
-            .account-wrapper {
-                .account-stats {
-                    &::after {
-                        left: 10px;
-                    }
-                }
-
-                .account-description {
-                    padding: 0;
-                    margin-top: 50px;
-
-                    .header {
-                        font-size: var(--font-size-50);
-                        text-align: center;
-
-                        img {
-                            width: 130px;
-                        }
-                    }
-
-                    .btn-wrapper {
-                        flex-direction: column;
-                        justify-content: flex-start;
-                        align-items: flex-start;
-                        gap: 10px;
-                    }
-                }
-            }
-        }
-
         .features-section {
             padding: 50px 0 50px;
             .list-wrapper {
@@ -1137,20 +1109,29 @@ button:focus {
         }
 
         .account-section {
+          
             .account-wrapper {
                 .account-stats {
+                    &::after {
+                        left: 10px;
+                    }
                     .header-stats {
                         align-items: baseline;
                     }
                 }
                 .account-description {
+                    margin-top: 50px;
+
                     .header {
                         font-size: var(--font-size-37);
                         text-align: left;
                     }
+
                     .btn-wrapper {
-                        align-items: stretch;
+                        flex-direction: column;
                         justify-content: center;
+                        align-items: stretch;
+                        gap: 10px;
 
                         .button-link {
                             width: 100%;
@@ -1260,6 +1241,24 @@ button:focus {
     }
 }
 
+@media (max-width: 375px) {
+    .main-page {
+        .account-section {
+            .account-wrapper {
+                .account-description {
+                    margin-top: 0;
+                    .header {
+                        font-size: 2.188rem;
+                         img {
+                             width: 100px;
+                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 320px) {
     .main-page {
         .first-screen-section {
@@ -1288,6 +1287,9 @@ button:focus {
 
             .account-wrapper {
                 .account-stats {
+                    &::after {
+                        left: -10px;
+                    }
                     .account-stats-table {
                         margin-bottom: 50px;
                     }
@@ -1305,11 +1307,22 @@ button:focus {
                         }
                     }
                 }
+
             }
         }
 
         .separator-banner {
             padding-top: 50px;
+        }
+
+        .discover-section {
+
+                 .wrapper-account-btn {margin-top: 0;}
+        }
+
+
+        .copy-trading {
+            .copy-trading-header {padding: 0;}
         }
     }
 }

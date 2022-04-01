@@ -491,14 +491,12 @@ button:focus {
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  top: -40px;
+  top: -30px;
   left: -20px;
-  width: 145px;
-  height: 115px;
+  width: 150px;
+  height: 150px;
   background-image: url("../../img/icons/icon-fiat-account.png");
   background-size: contain;
-  -webkit-filter: drop-shadow(0px 40px 30px rgba(0, 0, 0, 0.2));
-          filter: drop-shadow(0px 40px 30px rgba(0, 0, 0, 0.2));
   z-index: 1;
 }
 
@@ -509,13 +507,16 @@ button:focus {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  padding: 24px 40px 24px 150px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 25px 30px 30px 100px;
   border-radius: 10px;
-  background: linear-gradient(92.89deg, #6a26ff 9.02%, #fb4dff 162.32%);
+  background: linear-gradient(92.89deg, #ffffff -56.63%, #b28fff 58.55%, #fd99ff 162.32%);
 }
 
 .main-page .account-section .account-wrapper .account-stats .header-stats h2 {
-  font-size: var(--font-size-50);
+  font-size: 2rem;
   margin-right: 5px;
 }
 
@@ -547,11 +548,12 @@ button:focus {
 }
 
 .main-page .account-section .account-wrapper .account-description {
-  padding: 0 50px;
+  padding: 0 40px;
 }
 
 .main-page .account-section .account-wrapper .account-description .header {
   font-size: var(--font-size-50);
+  max-width: 540px;
 }
 
 .main-page .account-section .account-wrapper .account-description .header img {
@@ -671,6 +673,7 @@ button:focus {
 
 .main-page .discover-section .wrapper-account-btn {
   position: relative;
+  margin-top: 100px;
   z-index: 2;
 }
 
@@ -847,9 +850,6 @@ button:focus {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   .main-page .account-section .account-wrapper .account-stats .account-stats-table {
     width: 100%;
@@ -859,6 +859,10 @@ button:focus {
   }
   .main-page .account-section .account-wrapper .account-description {
     padding: 0;
+  }
+  .main-page .account-section .account-wrapper .account-description .header {
+    max-width: 438px;
+    font-size: 2.5rem;
   }
   .main-page .account-section .account-wrapper .account-description .header img {
     width: 140px;
@@ -1143,36 +1147,6 @@ button:focus {
   .main-page .first-screen-section .main-section .main-img-container::before {
     display: none;
   }
-  .main-page .account-section {
-    padding-bottom: 120px;
-  }
-  .main-page .account-section .account-wrapper .account-stats::after {
-    left: 10px;
-  }
-  .main-page .account-section .account-wrapper .account-description {
-    padding: 0;
-    margin-top: 50px;
-  }
-  .main-page .account-section .account-wrapper .account-description .header {
-    font-size: var(--font-size-50);
-    text-align: center;
-  }
-  .main-page .account-section .account-wrapper .account-description .header img {
-    width: 130px;
-  }
-  .main-page .account-section .account-wrapper .account-description .btn-wrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    gap: 10px;
-  }
   .main-page .features-section {
     padding: 50px 0 50px;
   }
@@ -1234,22 +1208,33 @@ button:focus {
   .main-page .features-section .list-wrapper .features-list .features-item .card .card-body .card-description {
     font-size: var(--font-size-16);
   }
+  .main-page .account-section .account-wrapper .account-stats::after {
+    left: 10px;
+  }
   .main-page .account-section .account-wrapper .account-stats .header-stats {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
+  }
+  .main-page .account-section .account-wrapper .account-description {
+    margin-top: 50px;
   }
   .main-page .account-section .account-wrapper .account-description .header {
     font-size: var(--font-size-37);
     text-align: left;
   }
   .main-page .account-section .account-wrapper .account-description .btn-wrapper {
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    gap: 10px;
   }
   .main-page .account-section .account-wrapper .account-description .btn-wrapper .button-link {
     width: 100%;
@@ -1335,6 +1320,18 @@ button:focus {
   }
 }
 
+@media (max-width: 375px) {
+  .main-page .account-section .account-wrapper .account-description {
+    margin-top: 0;
+  }
+  .main-page .account-section .account-wrapper .account-description .header {
+    font-size: 2.188rem;
+  }
+  .main-page .account-section .account-wrapper .account-description .header img {
+    width: 100px;
+  }
+}
+
 @media (max-width: 320px) {
   .main-page .first-screen-section .main-section .first-screen-header .first-screen-heading {
     margin-top: 60px;
@@ -1352,6 +1349,9 @@ button:focus {
     padding-top: 70px;
     padding-bottom: 120px;
   }
+  .main-page .account-section .account-wrapper .account-stats::after {
+    left: -10px;
+  }
   .main-page .account-section .account-wrapper .account-stats .account-stats-table {
     margin-bottom: 50px;
   }
@@ -1367,6 +1367,12 @@ button:focus {
   }
   .main-page .separator-banner {
     padding-top: 50px;
+  }
+  .main-page .discover-section .wrapper-account-btn {
+    margin-top: 0;
+  }
+  .main-page .copy-trading .copy-trading-header {
+    padding: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
