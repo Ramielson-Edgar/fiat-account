@@ -381,7 +381,6 @@ button:focus {
             .features-list {
                 display: grid;
                 grid-template-columns: repeat(4, 270px);
-
                 gap: 10px;
 
                 .features-item {
@@ -394,6 +393,7 @@ button:focus {
                         border-radius: 17px;
                         box-shadow: -10px -10px 30px rgba(255, 255, 255, 0.6), 10px 10px 30px rgba(221, 45, 130, 0.2);
                     }
+
                     .card {
                         display: flex;
                         flex-direction: column;
@@ -633,17 +633,23 @@ button:focus {
                 flex: 1;
             }
         }
+
         .wrapper-account-btn {
             position: relative;
             z-index: 2;
+
+            .header-wrapper-btn {
+                h2 {
+                    font-weight: 400;
+                }
+            }
 
             .split-wrapper {
                 margin-bottom: 0;
                 text-align: left;
                 gap: 17px;
 
-                .account-button:first-child::after,
-                .account-button:first-child::before {
+                .account-button::before {
                     @include before-after-option();
                     position: absolute;
 
@@ -654,24 +660,17 @@ button:focus {
                     width: 120px;
                     height: 100px;
 
-                    background-image: url("../../img/icon-crypto.png");
                     background-size: contain;
                 }
+                .icon-crypto-account::before {
+                    background-image: url("../../img/icon-crypto.png");
+                }
 
-                .account-button:first-child::after {
-                    top: 10px;
-                    left: 20px;
-
-                    width: 50px;
-                    height: 50px;
-
-                    border-radius: 50px;
-                    filter: blur(30px);
-
-                    background-color: rgba(255, 149, 149, 1);
-                    background-image: url("");
-
-                    z-index: -1;
+                .icon-cent-account::before {
+                    top: -22px;
+                    width: 120px;
+                    height: 120px;
+                    background-image: url("../../img/icon-cent.png");
                 }
 
                 .account-button {
@@ -767,7 +766,6 @@ button:focus {
                                 justify-content: center;
                                 display: flex;
                                 flex-direction: column;
-                                justify-content: center;
                             }
                         }
                     }
@@ -805,6 +803,12 @@ button:focus {
                 }
                 .account-description {
                     padding: 0;
+
+                    .header {
+                        img {
+                            width: 140px;
+                        }
+                    }
 
                     .btn-wrapper {
                         justify-content: center;
@@ -1204,12 +1208,18 @@ button:focus {
                     align-items: stretch;
                     padding: 10px;
 
-                    .account-button:first-child::before {
-                        top: 0;
-                        left: 0;
+                    .icon-crypto-account::before,
+                    .icon-cent-account::before{
+                          left: 5px;
                         width: 80px;
                         height: 80px;
                     }
+
+                     .icon-cent-account::before{
+                         left: 5px;
+                         width: 90px;
+                         height: 90px;
+                     }
 
                     .account-button {
                         padding: 20px 20px 20px 100px;
