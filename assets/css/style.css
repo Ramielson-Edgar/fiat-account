@@ -699,6 +699,10 @@ button:focus {
 }
 
 .main-page .discover-section .wrapper-account-btn .split-wrapper .icon-crypto-account::before {
+  width: 200px;
+  height: 100px;
+  left: -47px;
+  top: -10px;
   background-image: url("../../img/icon-crypto.png");
 }
 

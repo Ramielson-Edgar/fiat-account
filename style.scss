@@ -663,6 +663,10 @@ button:focus {
                     background-size: contain;
                 }
                 .icon-crypto-account::before {
+                    width: 200px;
+                    height: 100px;
+                    left: -47px;
+                    top: -10px;
                     background-image: url("../../img/icon-crypto.png");
                 }
 
@@ -1209,17 +1213,17 @@ button:focus {
                     padding: 10px;
 
                     .icon-crypto-account::before,
-                    .icon-cent-account::before{
-                          left: 5px;
+                    .icon-cent-account::before {
+                        left: 5px;
                         width: 80px;
                         height: 80px;
                     }
 
-                     .icon-cent-account::before{
-                         left: 5px;
-                         width: 90px;
-                         height: 90px;
-                     }
+                    .icon-cent-account::before {
+                        left: 5px;
+                        width: 90px;
+                        height: 90px;
+                    }
 
                     .account-button {
                         padding: 20px 20px 20px 100px;
