@@ -558,7 +558,7 @@ button:focus {
     // SEPARATOR BANNER
     .separator-banner {
         position: relative;
-        background-image: url("../../img/background-separator-img.png");
+        background-image: url("../../img/background-separator.png");
         background-size: cover;
 
         padding: 60px 0 50px;
@@ -659,26 +659,26 @@ button:focus {
                     top: -20px;
                     left: -30px;
 
-                    max-width: 100%;
-                    width: 120px;
-                    height: 100px;
-
                     background-size: contain;
                 }
 
                 .icon-crypto-account::before {
                     width: 200px;
-                    height: 100px;
-                    left: -47px;
-                    top: -10px;
-                    background-image: url("../../img/icon-crypto.png");
+                    height: 200px;
+                    top: -40px;
+                    left: -50px;
+                    background-image: url("../../img/icons/icon-crypto.png");
                 }
 
                 .icon-cent-account::before {
-                    top: -22px;
-                    width: 120px;
-                    height: 120px;
-                    background-image: url("../../img/icon-cent.png");
+                    width: 200px;
+                    height: 180px;
+                    top: -40px;
+                    left: -50px;
+                    background-image: url("../../img/icons/icon-cent.png");
+                }
+                .account-button:last-child {
+                    width: 369px;
                 }
 
                 .account-button {
@@ -911,6 +911,12 @@ button:focus {
                     flex-direction: column;
                     justify-content: center;
 
+                    .icon-cent-account::before {
+                        width: 200px;
+                        height: 200px;
+                        top: -50px;
+                        left: -57px;
+                    }
                     .account-button {
                         .split-wrapper {
                             display: flex;
@@ -1109,7 +1115,6 @@ button:focus {
         }
 
         .account-section {
-          
             .account-wrapper {
                 .account-stats {
                     &::after {
@@ -1154,7 +1159,7 @@ button:focus {
         }
 
         .separator-banner {
-            background-image: url("../../img/background-separator-575-img.jpg");
+            background-image: url("../../img/background-separator-575.jpg");
             background-size: cover;
 
             .separator-header {
@@ -1194,17 +1199,20 @@ button:focus {
                     align-items: stretch;
                     padding: 10px;
 
-                    .icon-crypto-account::before,
-                    .icon-cent-account::before {
-                        left: 5px;
-                        width: 80px;
-                        height: 80px;
+                    .account-button:last-child {
+                        width: 100%;
+                    }
+
+                    .icon-crypto-account::before {
+                        left: -40px;
+                        width: 180px;
+                        height: 180px;
                     }
 
                     .icon-cent-account::before {
-                        left: 5px;
-                        width: 90px;
-                        height: 90px;
+                        left: -40px;
+                        width: 180px;
+                        height: 180px;
                     }
 
                     .account-button {
@@ -1249,9 +1257,9 @@ button:focus {
                     margin-top: 0;
                     .header {
                         font-size: 2.188rem;
-                         img {
-                             width: 100px;
-                         }
+                        img {
+                            width: 100px;
+                        }
                     }
                 }
             }
@@ -1307,7 +1315,6 @@ button:focus {
                         }
                     }
                 }
-
             }
         }
 
@@ -1316,13 +1323,15 @@ button:focus {
         }
 
         .discover-section {
-
-                 .wrapper-account-btn {margin-top: 0;}
+            .wrapper-account-btn {
+                margin-top: 0;
+            }
         }
 
-
         .copy-trading {
-            .copy-trading-header {padding: 0;}
+            .copy-trading-header {
+                padding: 0;
+            }
         }
     }
 }

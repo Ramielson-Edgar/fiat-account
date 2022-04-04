@@ -574,7 +574,7 @@ button:focus {
 
 .main-page .separator-banner {
   position: relative;
-  background-image: url("../../img/background-separator-img.png");
+  background-image: url("../../img/background-separator.png");
   background-size: cover;
   padding: 60px 0 50px;
 }
@@ -695,25 +695,27 @@ button:focus {
   position: absolute;
   top: -20px;
   left: -30px;
-  max-width: 100%;
-  width: 120px;
-  height: 100px;
   background-size: contain;
 }
 
 .main-page .discover-section .wrapper-account-btn .split-wrapper .icon-crypto-account::before {
   width: 200px;
-  height: 100px;
-  left: -47px;
-  top: -10px;
-  background-image: url("../../img/icon-crypto.png");
+  height: 200px;
+  top: -40px;
+  left: -50px;
+  background-image: url("../../img/icons/icon-crypto.png");
 }
 
 .main-page .discover-section .wrapper-account-btn .split-wrapper .icon-cent-account::before {
-  top: -22px;
-  width: 120px;
-  height: 120px;
-  background-image: url("../../img/icon-cent.png");
+  width: 200px;
+  height: 180px;
+  top: -40px;
+  left: -50px;
+  background-image: url("../../img/icons/icon-cent.png");
+}
+
+.main-page .discover-section .wrapper-account-btn .split-wrapper .account-button:last-child {
+  width: 369px;
 }
 
 .main-page .discover-section .wrapper-account-btn .split-wrapper .account-button {
@@ -991,6 +993,12 @@ button:focus {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .main-page .discover-section .wrapper-account-btn .split-wrapper .icon-cent-account::before {
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    left: -57px;
+  }
   .main-page .discover-section .wrapper-account-btn .split-wrapper .account-button .split-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1246,7 +1254,7 @@ button:focus {
     margin-bottom: 40px;
   }
   .main-page .separator-banner {
-    background-image: url("../../img/background-separator-575-img.jpg");
+    background-image: url("../../img/background-separator-575.jpg");
     background-size: cover;
   }
   .main-page .separator-banner .separator-header {
@@ -1282,16 +1290,18 @@ button:focus {
             align-items: stretch;
     padding: 10px;
   }
-  .main-page .discover-section .wrapper-account-btn .split-wrapper .icon-crypto-account::before,
-  .main-page .discover-section .wrapper-account-btn .split-wrapper .icon-cent-account::before {
-    left: 5px;
-    width: 80px;
-    height: 80px;
+  .main-page .discover-section .wrapper-account-btn .split-wrapper .account-button:last-child {
+    width: 100%;
+  }
+  .main-page .discover-section .wrapper-account-btn .split-wrapper .icon-crypto-account::before {
+    left: -40px;
+    width: 180px;
+    height: 180px;
   }
   .main-page .discover-section .wrapper-account-btn .split-wrapper .icon-cent-account::before {
-    left: 5px;
-    width: 90px;
-    height: 90px;
+    left: -40px;
+    width: 180px;
+    height: 180px;
   }
   .main-page .discover-section .wrapper-account-btn .split-wrapper .account-button {
     padding: 20px 20px 20px 100px;
