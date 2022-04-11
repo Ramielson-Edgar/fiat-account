@@ -324,6 +324,7 @@ button:focus {
 .main-page .first-screen-section .main-section .first-screen-header .first-screen-heading img {
   display: inline;
   vertical-align: middle;
+  width: 320px;
 }
 
 .main-page .first-screen-section .main-section .first-screen-header .first-screen-description {
@@ -829,6 +830,9 @@ button:focus {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .main-page .first-screen-section .main-section .first-screen-header .first-screen-heading img {
+    width: 250px;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -1217,7 +1221,7 @@ button:focus {
     font-size: var(--font-size-16);
   }
   .main-page .account-section .account-wrapper .account-stats::after {
-    left: 10px;
+    left: 0;
   }
   .main-page .account-section .account-wrapper .account-stats .header-stats {
     -webkit-box-align: baseline;
@@ -1349,7 +1353,7 @@ button:focus {
   }
   .main-page .first-screen-section .main-section .first-screen-header .first-screen-heading img {
     width: 190px;
-    vertical-align: text-bottom;
+    vertical-align: middle;
   }
   .main-page .separator-banner,
   .main-page .security-section {
@@ -1361,6 +1365,7 @@ button:focus {
   }
   .main-page .account-section .account-wrapper .account-stats::after {
     left: -10px;
+    width: 45%;
   }
   .main-page .account-section .account-wrapper .account-stats .account-stats-table {
     margin-bottom: 50px;

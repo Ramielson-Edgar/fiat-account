@@ -319,6 +319,7 @@ button:focus {
 
             .first-screen-header {
                 margin-bottom: 50px;
+
                 .first-screen-heading {
                     @include before-after-option();
                     font-size: var(--font-size-100);
@@ -327,6 +328,7 @@ button:focus {
                     img {
                         display: inline;
                         vertical-align: middle;
+                         width: 320px;
                     }
                 }
 
@@ -780,6 +782,18 @@ button:focus {
                 }
             }
         }
+
+        .first-screen-section {
+            .main-section {
+                .first-screen-header {
+
+                    .first-screen-heading {
+
+                        img {width: 250px;}
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -1118,7 +1132,7 @@ button:focus {
             .account-wrapper {
                 .account-stats {
                     &::after {
-                        left: 10px;
+                       left: 0;
                     }
                     .header-stats {
                         align-items: baseline;
@@ -1249,7 +1263,7 @@ button:focus {
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width:375px) {
     .main-page {
         .account-section {
             .account-wrapper {
@@ -1262,6 +1276,7 @@ button:focus {
                         }
                     }
                 }
+
             }
         }
     }
@@ -1277,7 +1292,7 @@ button:focus {
                         margin-bottom: 20px;
                         img {
                             width: 190px;
-                            vertical-align: text-bottom;
+                            vertical-align: middle;
                         }
                     }
                 }
@@ -1297,6 +1312,7 @@ button:focus {
                 .account-stats {
                     &::after {
                         left: -10px;
+                        width: 45%;
                     }
                     .account-stats-table {
                         margin-bottom: 50px;
