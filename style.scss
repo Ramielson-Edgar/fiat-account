@@ -328,7 +328,7 @@ button:focus {
                     img {
                         display: inline;
                         vertical-align: middle;
-                         width: 320px;
+                        width: 320px;
                     }
                 }
 
@@ -730,11 +730,18 @@ button:focus {
             .img-container {
                 flex: 1;
             }
+        }
 
+        .copy-trading-header {
             .header {
-                font-size: var(--font-size-50);
+                font-size: 3.125rem;
                 color: var(--white-color);
             }
+
+        .btn-wrapper {
+            display: flex;
+            gap: 10px;
+        }
         }
     }
 }
@@ -786,10 +793,10 @@ button:focus {
         .first-screen-section {
             .main-section {
                 .first-screen-header {
-
                     .first-screen-heading {
-
-                        img {width: 250px;}
+                        img {
+                            width: 250px;
+                        }
                     }
                 }
             }
@@ -1132,7 +1139,7 @@ button:focus {
             .account-wrapper {
                 .account-stats {
                     &::after {
-                       left: 0;
+                        left: 0;
                     }
                     .header-stats {
                         align-items: baseline;
@@ -1259,11 +1266,25 @@ button:focus {
 
         .copy-trading {
             padding: 50px 0;
+
+            .copy-trading-header {
+                .btn-wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: stretch;
+                    gap: 10px;
+
+                    a {
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 }
 
-@media (max-width:375px) {
+@media (max-width: 375px) {
     .main-page {
         .account-section {
             .account-wrapper {
@@ -1276,7 +1297,6 @@ button:focus {
                         }
                     }
                 }
-
             }
         }
     }

@@ -779,9 +779,16 @@ button:focus {
           flex: 1;
 }
 
-.main-page .copy-trading .split-wrapper .header {
-  font-size: var(--font-size-50);
+.main-page .copy-trading .copy-trading-header .header {
+  font-size: 3.125rem;
   color: var(--white-color);
+}
+
+.main-page .copy-trading .copy-trading-header .btn-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
 }
 
 @media (max-width: 1198px) {
@@ -1331,6 +1338,25 @@ button:focus {
   }
   .main-page .copy-trading {
     padding: 50px 0;
+  }
+  .main-page .copy-trading .copy-trading-header .btn-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    gap: 10px;
+  }
+  .main-page .copy-trading .copy-trading-header .btn-wrapper a {
+    width: 100%;
   }
 }
 
